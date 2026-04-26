@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>TaskFlow Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<div class="app">
+
+  <aside class="sidebar">
+  <h2>TaskFlow</h2>
+
+  <nav class="nav">
+    <a href="index.html" class="active">Dashboard</a>
+    <a href="about.html">About</a>
+  </nav>
+</aside>
+
+  <main class="main">
+
+    <div class="topbar">
+      <input type="text" id="search" placeholder="Search tasks...">
+    </div>
+
+    <div class="stats">
+      <div class="card">Total <span id="total"></span></div>
+      <div class="card">Active <span id="active"></span></div>
+      <div class="card">Done <span id="completed"></span></div>
+      <div class="card">Completion <span id="completionRate">0%</span></div>
+    </div>
+
+    <form id="taskForm" class="task-form">
+      <input type="text" id="taskInput" placeholder="Task title..." required>
+      <input type="text" id="taskDesc" placeholder="Description">
+
+      <label>Start</label>
+      <input type="datetime-local" id="startDate">
+
+      <label>Due</label>
+      <input type="datetime-local" id="dueDate">
+
+      <select id="priority">
+        <option value="low">Low</option>
+        <option value="medium">Medium</option>
+        <option value="high">High</option>
+      </select>
+
+      <button>Add</button>
+    </form>
+
+    <div class="task-sections">
+      <div class="task-column">
+        <h3>Active</h3>
+        <ul id="activeList"></ul>
+      </div>
+
+      <div class="task-column">
+        <h3>Completed</h3>
+        <ul id="completedList"></ul>
+      </div>
+    </div>
+
+  </main>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+<footer class="footer">
+  <p>© 2026 James Okeke • mrjamesokeke@gmail.com</p>
+</footer>
+</html>
